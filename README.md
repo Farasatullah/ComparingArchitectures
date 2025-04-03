@@ -29,7 +29,7 @@ This project demonstrates how to build a simple iOS form using two popular softw
 ### 2. MVP (Model–View–Presenter)
 
 - **Model**: Same as MVC.
-- **View**: `MyViewController.swift` conforms to a protocol `PersonView` and only updates UI.
+- **View**: `ViewController.swift` conforms to a protocol `PersonView` and only updates UI.
 - **Presenter**: Handles business logic and updates the View via the protocol.
 
 📁 Files:
