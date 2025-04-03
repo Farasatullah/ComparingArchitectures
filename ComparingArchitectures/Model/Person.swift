@@ -6,6 +6,7 @@
 //
 
 import Foundation
+//MARK: - Model Class
 class Person {
     private var name: String
     private var email: String

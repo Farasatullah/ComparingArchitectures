@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK: - Controller Class
 class MyViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
@@ -21,9 +22,10 @@ class MyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Initial UI setup if needed
-        createCard()
-        initButton()
+        modifiedCard()
+        modifiedButton()
     }
+    //MARK: - Will adjust the view whenever view updates itself again
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -42,7 +44,7 @@ class MyViewController: UIViewController {
             resultLabel.text = "Please enter both name and email."
             return
         }
-        
+        //MARK: - Animate Out Card
         UIView.animate(withDuration: 0.1, animations: { [self] in
             sender.transform = CGAffineTransform(scaleX: 1.9, y: 2.6)
             
@@ -50,6 +52,7 @@ class MyViewController: UIViewController {
             self.person.setName(name)
             self.person.setEmail(email)
         }) { _ in
+            //MARK: - Animate In Card
             UIView.animate(withDuration: 0.1) {
                 sender.transform = .identity
                 
@@ -59,26 +62,23 @@ class MyViewController: UIViewController {
         }
         
     }
-    func createCard(){
+    //MARK: - Updated Card
+    func modifiedCard(){
         cardView.layer.cornerRadius = 10
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(flipCard))
         cardView.addGestureRecognizer(tapGesture)
     }
-    func initButton() {
+    //MARK: - Updated Submit Button
+    func modifiedButton() {
         submitBtn.autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin, .flexibleLeftMargin, .flexibleRightMargin] // Keeps it centered
     }
+    //MARK: - Card Flip Logic
     @objc func flipCard() {
         UIView.transition(with: cardView, duration: 0.5, options: .transitionFlipFromRight, animations: {
             self.cardView.backgroundColor = self.isFlipped ? .systemBlue : .systemRed
             self.resultLabel.isHidden = self.isFlipped
             self.submitBtn.isHidden = self.isFlipped
-
-//            if !self.isFlipped {
-//                self.cardView.addSubview(self.submitBtn)
-//                self.submitBtn.center = CGPoint(x: self.cardView.bounds.midX, y: self.cardView.bounds.midY) // Ensure it's centered after flipping
-//            } else {
-//                self.submitBtn.removeFromSuperview()
-//            }
+            
         }, completion: { _ in
             self.isFlipped.toggle()
         })
