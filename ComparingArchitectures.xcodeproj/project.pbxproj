@@ -16,6 +16,8 @@
 		D09781DE2D9EC31C00D04FA5 /* ComparingArchitecturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09781DD2D9EC31C00D04FA5 /* ComparingArchitecturesTests.swift */; };
 		D09781E82D9EC31C00D04FA5 /* ComparingArchitecturesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09781E72D9EC31C00D04FA5 /* ComparingArchitecturesUITests.swift */; };
 		D09781EA2D9EC31C00D04FA5 /* ComparingArchitecturesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09781E92D9EC31C00D04FA5 /* ComparingArchitecturesUITestsLaunchTests.swift */; };
+		D09781F92D9EC46E00D04FA5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09781F82D9EC46E00D04FA5 /* Person.swift */; };
+		D09781FC2D9EC4A500D04FA5 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09781FB2D9EC4A500D04FA5 /* MyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D09781E32D9EC31C00D04FA5 /* ComparingArchitecturesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComparingArchitecturesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09781E72D9EC31C00D04FA5 /* ComparingArchitecturesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparingArchitecturesUITests.swift; sourceTree = "<group>"; };
 		D09781E92D9EC31C00D04FA5 /* ComparingArchitecturesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparingArchitecturesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D09781F82D9EC46E00D04FA5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D09781FB2D9EC4A500D04FA5 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,10 @@
 			children = (
 				D09781C62D9EC31900D04FA5 /* AppDelegate.swift */,
 				D09781C82D9EC31900D04FA5 /* SceneDelegate.swift */,
+				D09781FD2D9EC50A00D04FA5 /* Controller */,
+				D09781F72D9EC41700D04FA5 /* Model */,
+				D09781FA2D9EC48B00D04FA5 /* View */,
 				D09781CA2D9EC31900D04FA5 /* ViewController.swift */,
-				D09781CC2D9EC31900D04FA5 /* Main.storyboard */,
 				D09781CF2D9EC31C00D04FA5 /* Assets.xcassets */,
 				D09781D12D9EC31C00D04FA5 /* LaunchScreen.storyboard */,
 				D09781D42D9EC31C00D04FA5 /* Info.plist */,
@@ -125,6 +131,30 @@
 				D09781E92D9EC31C00D04FA5 /* ComparingArchitecturesUITestsLaunchTests.swift */,
 			);
 			path = ComparingArchitecturesUITests;
+			sourceTree = "<group>";
+		};
+		D09781F72D9EC41700D04FA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D09781F82D9EC46E00D04FA5 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D09781FA2D9EC48B00D04FA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D09781CC2D9EC31900D04FA5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D09781FD2D9EC50A00D04FA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D09781FB2D9EC4A500D04FA5 /* MyViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +290,8 @@
 			files = (
 				D09781CB2D9EC31900D04FA5 /* ViewController.swift in Sources */,
 				D09781C72D9EC31900D04FA5 /* AppDelegate.swift in Sources */,
+				D09781F92D9EC46E00D04FA5 /* Person.swift in Sources */,
+				D09781FC2D9EC4A500D04FA5 /* MyViewController.swift in Sources */,
 				D09781C92D9EC31900D04FA5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
